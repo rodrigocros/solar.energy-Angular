@@ -1,0 +1,52 @@
+<div class="col-12">
+    <div class="row">
+        <div class="col-2 p-0">
+            <pag-side-bar></pag-side-bar>
+        </div>
+        <div class="col-10">
+            <h2 class="pt-3">Unidades</h2>
+            <div class="row bg-light mt-3 vh-100">
+                <div class="col-1"></div>
+                <div class="col-10 mt-5">
+                    <div class="row mt-5">
+                    </div>
+                    <h2>lista de unidades</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Apelido</th>
+                            <th scope="col">Local</th>
+                            <th scope="col">Marca</th>
+                            <th scope="col">modelo</th>
+                            <th scope="col">Editar</th>
+                            <th scope="col">Salvar</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr *ngFor="let unidade of unidadeList">
+                                <th class="text-muted" scope="row">{{unidade.id}}</th>
+                                <td class="text-muted">{{unidade.apelido}}</td>
+                                <td class="text-muted">{{unidade.local}}</td>
+                                <td class="text-muted">{{unidade.marca}}</td>
+                                <td class="text-muted">{{unidade.modelo}}</td>
+                                <td ><button class="btn btn-success" (click)="buscarUnidade(unidade)" routerLink="/editarUnidade">Editar</button></td>
+                                <td ><button class="btn btn-danger" (click)="removerUnidadeBanco(unidade)" >Remover</button></td>
+                            </tr>
+                    </table>
+                    <div class=" d-flex justify-content-end mt-5">
+                        <button class="btn btn-primary" routerLink="/unidadesCadastrar">Nova Unidade</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+

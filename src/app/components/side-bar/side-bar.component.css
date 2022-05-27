@@ -1,0 +1,19 @@
+li{
+    list-style-image: none;
+    list-style: none;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif; ;
+    color: dimgrey;
+}
+ul{
+    padding: 0;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;;
+}
+
+.active {
+    background-color: #4CBC9A!important
+}

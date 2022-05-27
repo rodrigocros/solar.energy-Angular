@@ -1,0 +1,11 @@
+.fontPop{
+    font-family: 'Poppins', sans-serif; ;
+}
+
+.textUnidades{
+    margin-left: 100em;
+}
+.required:after {
+    content:" *"; 
+    color: red;
+}

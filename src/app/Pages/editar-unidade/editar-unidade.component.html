@@ -1,0 +1,94 @@
+<div class="col-12">
+    <div class="row">
+        <div class="col-2 p-0">
+            <pag-side-bar></pag-side-bar>
+        </div>
+        <div class="col-10">
+            <h2 class="pt-3">Editar Unidade</h2>
+            <div class="row bg-light mt-3 vh-100">
+                <div class="col-1"></div>
+                <div class="col-5 mt-5">
+                    <div class="row mb-4">
+                        <h4>Editar unidade Geradora</h4>
+                    </div>
+                    <form #cadastro="ngForm">
+                        <div class="mb-3">
+                            <label class="required" for="Apelido">Apelido</label>
+                            <input name="apelido" [(ngModel)]="unidadeEditada.apelido" type="text" class="form-control required" id="Apelido" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="required" for="local">Local</label>
+                            <input name="local" [(ngModel)]="unidadeEditada.local" type="text" class="form-control" id="local" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="required" for="marca">Marca</label>
+                            <input name="marca" [(ngModel)]="unidadeEditada.marca" type="text" class="form-control" id="marca" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="required" for="modelo">Modelo</label>
+                            <input name="modelo" [(ngModel)]="unidadeEditada.modelo" type="text" class="form-control" id="modelo" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input name="ativo" [(ngModel)]="unidadeEditada.ativo"  type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" value="True" for="exampleCheck1">Ativo</label>
+                        </div>
+                        <button [disabled]="!cadastro.valid" type="submit" class="btn btn-primary" (click)="editarUnidadeBanco(unidadeEditada)" routerLink="/unidadesLista">Salvar</button>
+                        <button routerLink="/unidadesLista" class="btn btn-danger ms-3">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+<div class="col-12 fontPop">
+    <div class="row bg-light">
+        <h2 class="text-center">Editar Unidade</h2>
+        <div class="col-2 p-0">
+            <pag-side-bar></pag-side-bar>
+        </div>
+        <div class="col-10 bg-light bg-opacity-10">
+            <div class="container col-7 mt-5">
+                <h2>Editar unidade Geradora</h2>
+                <form #cadastro="ngForm">
+                    <div class="mb-3">
+                        <label class="required" for="Apelido">Apelido</label>
+                        <input name="apelido" [(ngModel)]="unidadeEditada.apelido" type="text" class="form-control" id="Apelido" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="required" for="local">Local</label>
+                        <input name="local" [(ngModel)]="unidadeEditada.local" type="text" class="form-control" id="local" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="required" for="marca">Marca</label>
+                        <input name="marca" [(ngModel)]="unidadeEditada.marca" type="text" class="form-control" id="marca" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="required"  for="modelo">Modelo</label>
+                        <input name="modelo" [(ngModel)]="unidadeEditada.modelo" type="text" class="form-control" id="modelo" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input name="ativo" [(ngModel)]="unidadeEditada.ativo"  type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" value="True" for="exampleCheck1">Ativo</label>
+                    </div>
+                    <button [disabled]="!cadastro.valid" type="submit" class="btn btn-primary" (click)="editarUnidadeBanco(unidadeEditada)" routerLink="/unidadesLista">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>  -->

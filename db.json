@@ -1,0 +1,84 @@
+{
+  "unidadesSalvas": [
+    {
+      "id": 74,
+      "apelido": "f",
+      "local": "ff",
+      "marca": "f",
+      "modelo": "f",
+      "ativo": true
+    },
+    {
+      "id": 72,
+      "apelido": "k",
+      "local": "k",
+      "marca": "k",
+      "modelo": "k",
+      "ativo": true
+    },
+    {
+      "id": 71,
+      "apelido": "d",
+      "local": "d",
+      "marca": "d",
+      "modelo": "d",
+      "ativo": false
+    },
+    {
+      "id": 65,
+      "apelido": "u",
+      "local": "u",
+      "marca": "u",
+      "modelo": "u",
+      "ativo": true
+    },
+    {
+      "id": 44,
+      "apelido": "a",
+      "local": "a",
+      "marca": "a",
+      "modelo": "a",
+      "ativo": true
+    },
+    {
+      "id": 47,
+      "apelido": "t",
+      "local": "t",
+      "marca": "t",
+      "modelo": "t",
+      "ativo": true
+    }
+  ],
+  "energiaGerada": [
+    {
+      "id": "74",
+      "mesAno": "2022-06",
+      "totalKw": 120
+    },
+    {
+      "id": "72",
+      "mesAno": "2022-11",
+      "totalKw": 150
+    },
+    {
+      "id": "71",
+      "mesAno": "2022-04",
+      "totalKw": 100
+    },
+    {
+      "id": "65",
+      "mesAno": "2022-11",
+      "totalKw": 50
+    },
+    {
+      "id": "44",
+      "mesAno": "2022-01",
+      "totalKw": 40
+    },
+    {
+      "id": "47",
+      "mesAno": "2022-09",
+      "totalKw": 60
+    }
+  ]
+}

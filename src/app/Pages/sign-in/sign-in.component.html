@@ -1,0 +1,32 @@
+<div class="row">
+        <div class="col-5 imgLogin vh-100"></div>
+        <div class="col-7">
+            <main class="form-signin text-center container ">
+                <div class="row mt-5">
+                    <div class="col-3"></div>
+                    <div class="col-6">
+                        <form #Login="ngForm" (ngSubmit)="sendUser()">
+                            <img class="mb-4" src="./assets/img/logo.png" alt="" width="200" height="200">
+                            <h1 class="h3 mb-3 fw-normal">Seja bem vindo</h1>
+                            <div class="form-floating">
+                                <input (keyup)="validateEmail()" [(ngModel)]="user.email" type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" e pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                                <label for="floatingInput">E-mail</label>
+                                <small class="form-text text-muted">Formato aceito: nome@dominio.com</small>
+                                <br>
+                                <small *ngIf="notEmail " class="form-text text-danger">Email fora do formato esperado</small>
+                            </div>
+                            <div class="form-floating mt-2">
+                                <input #senha="ngModel" [ngClass]="{'border-danger': user.password.length < 6 || senha.pristine}" [(ngModel)]="user.password" type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" required>
+                                <label for="floatingPassword">Senha</label>
+                                <small class="form-text text-muted">Sua senha deve conter no mínimo 6 digitos</small>
+                            </div>
+                            <button [disabled]="!Login.valid" class="w-100 btn btn-lg btn bgGreen mt-3" type="submit" routerLink="/home">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-6"></div>
+            </main>
+        </div>
+</div>
+
+

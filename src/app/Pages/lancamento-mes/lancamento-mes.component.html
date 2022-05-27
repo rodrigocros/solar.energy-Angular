@@ -1,0 +1,42 @@
+<div class="col-12">
+    <div class="row">
+        <div class="col-2 p-0">
+            <pag-side-bar></pag-side-bar>
+        </div>
+        <div class="col-10">
+            <h2 class="pt-3">Lançamento de geração mensal</h2>
+            <div class="row bg-light mt-3 vh-100">
+                <div class="col-1"></div>
+                <div class="col-10 mt-5">
+                    <div class="row mt-5">
+                    </div>
+                    <form #germensal="ngForm">
+                        <div class="col-md-4">
+                            <label for="geracao" class="form-label required">Unidade geradora</label>
+                            <select [(ngModel)]="geracaoMensal.id" name="geracao" class="form-select" id="geracao" required>
+                                <option name="teste" value="0" selected >Selecione uma unidade</option>
+                                <option name="geracao" *ngFor="let unidade of unidadesList" value="{{unidade.id}}">{{unidade.apelido}}</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <label for="country" class="form-label required">Mês/Ano</label>
+                            <input [(ngModel)]="geracaoMensal.mesAno"  class="form-select"  type="month" name="mesAno" id="" min="2022-01" max="2022-12" required>
+                        </div>
+                        <div class="col-md-4 mt-2">
+                            <label for="country" class="form-label required">Total kw gerado</label>
+                            <input [(ngModel)]="geracaoMensal.totalKw" type="number" class="form-control" id="cc-name" name="kwTotal" placeholder="" required>
+                        </div>
+                        <div class="mt-5">
+                            <button type="submit" [disabled]="!germensal.valid" class="btn btn-primary" (click)="cadastrarMes()" routerLink="/lancamentoMes" >Cadastrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
